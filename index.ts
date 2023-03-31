@@ -1,21 +1,12 @@
-const nico = {
-    nickname: "nick"
-}
-
-nico.hello()
-
-result = [1, 2, 3, 4] + false
-console.log(result)
-
-function divide(a, b) {
-    return a / b
-}
-
-divide("hello")
-
+let a = "hello"
+//console.log(typeof a);
+a = "bye"
+// a = 1
+let b = false
+// let b:boolean = false
+let c: number[] = []
+c.push("1")
 const player = {
-    age: 12
+    name: "daun"
 }
-
-player.age = false
-
+player.name = 1
