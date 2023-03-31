@@ -1,12 +1,26 @@
-let a = "hello"
-//console.log(typeof a);
-a = "bye"
-// a = 1
-let b = false
-// let b:boolean = false
-let c: number[] = []
-c.push("1")
-const player = {
-    name: "daun"
+type PlayerName = string;
+type Age = number;
+type Player = {
+    name: PlayerName,
+    age?: Age,
 }
-player.name = 1
+
+const playerDaun: Player = {
+    name: "daun",
+}
+
+const playerDaun2: Player = {
+    name: "daun2",
+}
+
+// function playerMaker(name: string): Player {
+//     return {
+//         name
+//     }
+// }
+
+const playerMaker = (name: string): Player => ({ name })
+
+const daunthird = playerMaker("daun3");
+daunthird.age = 12;
+console.log(daunthird.name);
