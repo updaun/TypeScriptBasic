@@ -67,3 +67,14 @@ function hi(name: string | number) {
     }
 
 }
+
+// function add(a: number, b: number) {
+//     return a + b;
+// }
+
+const add = (a: number, b: number) => a + b;
+
+// call signature
+type Add = (a: number, b: number) => number;
+
+const add2: Add = (a, b) => a + b;
