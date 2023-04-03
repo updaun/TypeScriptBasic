@@ -78,3 +78,15 @@ const add = (a: number, b: number) => a + b;
 type Add = (a: number, b: number) => number;
 
 const add2: Add = (a, b) => a + b;
+
+// overloading
+type Add3 = {
+    (a: number, b: number): number
+    (a: number, b: string): number
+}
+const add3: Add3 = (a, b) => {
+    if (typeof b === "string") {
+        return a
+    }
+    return a + b
+};
