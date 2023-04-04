@@ -147,3 +147,31 @@ type SuperPrint2 = <T, M>(a: T[], b: M) => T
 const superPrint2: SuperPrint2 = (arr) => arr[0]
 
 const e1 = superPrint2([1, 2, true, false, "hello"], "x")
+
+
+function superPrint3<T>(a: T[]) {
+    return a[0]
+}
+
+type NewPlayer<E> = {
+    name: string
+    extraInfo: E
+}
+
+type NicoExtra = {
+    favFood: string
+}
+// type DownPlayer = NewPlayer<{ favFood: string }>
+type DownPlayer = NewPlayer<NicoExtra>
+
+const down: DownPlayer = {
+    name: "daun",
+    extraInfo: {
+        favFood: "kimchi"
+    }
+}
+
+const pplayer: NewPlayer<null> = {
+    name: "up",
+    extraInfo: null
+}
