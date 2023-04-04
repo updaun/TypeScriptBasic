@@ -141,3 +141,9 @@ const a1 = superPrint([1, 2, 3])
 const b1 = superPrint([true, false, true])
 const c1 = superPrint(["a", "b", "c"])
 const d1 = superPrint([1, 2, true, false, "hello"])
+
+type SuperPrint2 = <T, M>(a: T[], b: M) => T
+
+const superPrint2: SuperPrint2 = (arr) => arr[0]
+
+const e1 = superPrint2([1, 2, true, false, "hello"], "x")
