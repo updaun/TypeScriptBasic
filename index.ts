@@ -123,3 +123,21 @@ const add5: Add5 = (a, b, c?: number) => {
 
 console.log(add5(1, 2))
 console.log(add5(1, 2, 3))
+
+// polymorphism
+type SuperPrint = {
+    // (arr: number[]): void
+    // (arr: boolean[]): void
+    // (arr: string[]): void
+    // (arr: (number | boolean)[]): void
+    // generic
+    // <TypePlaceholder>(arr: TypePlaceholder[]): TypePlaceholder
+    <T>(arr: T[]): T
+}
+
+const superPrint: SuperPrint = (arr) => arr[0]
+
+const a1 = superPrint([1, 2, 3])
+const b1 = superPrint([true, false, true])
+const c1 = superPrint(["a", "b", "c"])
+const d1 = superPrint([1, 2, true, false, "hello"])
