@@ -2,7 +2,7 @@ abstract class User {
     constructor(
         protected firstName: string,
         protected lastName: string,
-        protected nickname: string,
+        public nickname: string,
     ) { }
     abstract getNickName(): void
 
