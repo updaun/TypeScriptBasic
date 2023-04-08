@@ -45,3 +45,60 @@ const updown: Player = {
 
 // updown.name =
 
+// abstract class OtherUser {
+//     constructor(
+//         protected firstName: string,
+//         protected lastName: string
+//     ) { }
+//     abstract sayHi(name: string): string
+//     abstract fullName(): string
+// }
+
+// class OtherPlayer extends OtherUser {
+//     fullName() {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+//     sayHi(name: string) {
+//         return `Hello ${name}. My name is ${this.fullName()}`
+//     }
+// }
+
+interface OtherUser {
+    firstName: string,
+    lastName: string,
+    sayHi(name: string): string,
+    fullName(): string
+}
+interface Human {
+    health: number
+}
+class OtherPlayer implements OtherUser, Human {
+    constructor(
+        public firstName: string,
+        public lastName: string,
+        public health: number
+    ) { }
+    fullName() {
+        return `${this.firstName} ${this.lastName}`
+    }
+    sayHi(name: string) {
+        return `Hello ${name}. My name is ${this.fullName()}`
+    }
+}
+
+
+function makeUser(user: OtherUser): OtherUser {
+    return {
+        firstName: "up",
+        lastName: "daun",
+        fullName: () => "updaun",
+        sayHi: (name) => "hi"
+    }
+}
+
+makeUser({
+    firstName: "up",
+    lastName: "daun",
+    fullName: () => "updaun",
+    sayHi: (name) => "hi"
+})
