@@ -1,6 +1,5 @@
-class Block {
-    constructor(private data: string) {}
-    static hello() {
-        return "hi";
-    }
-}
+// document.querySelector
+
+// Math.max
+
+// localStorage.getItem
