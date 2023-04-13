@@ -1,5 +1,7 @@
-// document.querySelector
+import { init, exit } from "myPackage";
 
-// Math.max
+init({
+    url: "true"
+})
 
-// localStorage.getItem
+exit(1)
