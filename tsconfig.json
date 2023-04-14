@@ -3,12 +3,13 @@
         "src"
     ],
     "compilerOptions": {
-        "outDir": "build",
         "target": "ES6",
+        "outDir": "build",
         "lib": [
             "ES6",
             "DOM"
         ],
-        "strict": true
+        "strict": true,
+        "allowJs": true
     }
 }
